@@ -5,27 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meri Hazri — Terms & Info</title>
 
-  <!-- Primary meta -->
   <meta name="description" content="Meri Hazri - Terms of Service and app information. Read our policies and contact us for support." />
   <link rel="canonical" href="https://kishan953mahanand.github.io/Meri-Hazri/" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Meri Hazri — Terms of Service" />
-  <meta property="og:description" content="Terms of Service for Meri Hazri app. Learn about account rules, privacy, ads and limitations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kishan953mahanand.github.io/Meri-Hazri/" />
-  <!-- If you have a social image, replace the URL below -->
-  <meta property="og:image" content="https://kishan953mahanand.github.io/Meri-Hazri/meri_hazri_logo.png" />
-
-  <!-- Twitter card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Meri Hazri — Terms of Service" />
-  <meta name="twitter:description" content="Terms of Service for Meri Hazri app." />
-
-  <!-- Favicon (add a 32x32 png at this path or change) -->
-  <link rel="icon" href="meri_hazri_favicon.png" type="image/png" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -33,6 +14,8 @@
       --bg-start:#0f1724;
       --bg-end:#071029;
       --muted:#94a3b8;
+      --link:#7dd3fc;           /* light blue links */
+      --link-hover:#a5f3fc;     /* brighter cyan on hover */
       --card:#0b1220;
       --accent-1:#06b6d4;
       --accent-2:#10b981;
@@ -41,6 +24,7 @@
       --radius:14px;
       --maxw:940px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -48,65 +32,177 @@
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
       background: linear-gradient(180deg,var(--bg-start) 0%,var(--bg-end) 100%);
       color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
     }
 
-    /* Container */
-    .wrap{
-      max-width:var(--maxw);
-      margin:36px auto;
-      padding:24px;
-    }
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:24px}
 
-    /* Skip to content (accessibility) */
-    .skip {
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
-    .skip:focus {
-      left:8px;
-      top:8px;
-      width:auto;
-      height:auto;
-      padding:8px 12px;
-      background:#fff;
-      color:#032;
-      border-radius:6px;
-      z-index:1000;
-    }
+    a{color:var(--link);text-decoration:none;transition:color .2s ease}
+    a:hover,a:focus{color:var(--link-hover);text-decoration:underline}
 
     header.site-header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
+      display:flex;align-items:center;gap:16px;margin-bottom:18px;
     }
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .logo {
-      width:84px;
-      height:84px;
-      border-radius:12px;
-      overflow:hidden;
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:84px;height:84px;border-radius:12px;
       background:linear-gradient(180deg,var(--card),#071326);
       box-shadow:0 8px 24px rgba(2,6,23,0.6);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-shrink:0;
+      display:flex;align-items:center;justify-content:center;
     }
-    .logo img{width:76px;height:76px;display:block}
-    .logo .fallback {
-      font-weight:700;
+    .logo img{width:76px;height:76px;display:block;border-radius:10px}
+    .logo .fallback{font-weight:700;color:var(--text);font-size:18px;padding:8px}
+
+    .title h1{margin:0;font-size:1.4rem}
+    .meta{color:var(--muted);font-size:0.92rem}
+
+    nav.header-links{margin-left:auto}
+    nav.header-links a{
+      color:var(--link);
+      text-decoration:none;
+      font-size:0.95rem;
+      margin-left:12px;
+      padding:6px 10px;
+      border-radius:8px;
+    }
+    nav.header-links a:hover{color:var(--link-hover);background:rgba(255,255,255,0.03)}
+
+    main.card{
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 10px 40px rgba(2,6,23,0.65);
+      backdrop-filter: blur(6px);
+    }
+
+    h2{color:#dff7ee;margin-top:18px;font-size:1.05rem}
+    p, li{color:#cbd9e6}
+    ol{padding-left:20px}
+    li{margin:8px 0}
+    .small{font-size:0.95rem;color:var(--muted)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:600;
+      text-decoration:none;
+      color:#032;
+      background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      box-shadow:0 8px 30px rgba(16,185,129,0.12);
+      transition:opacity .2s ease;
+    }
+    .btn:hover{opacity:0.9}
+    .btn.secondary{
+      background:transparent;
+      color:var(--link);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .btn.secondary:hover{color:var(--link-hover);border-color:rgba(255,255,255,0.15)}
+
+    footer.site-foot{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:0.9rem;
+      text-align:center;
+      padding:12px 6px;
+    }
+
+    @media (max-width:720px){
+      .wrap{margin:18px 14px;padding:16px}
+      .logo{width:64px;height:64px}
+      .title h1{font-size:1.1rem}
+      header.site-header{align-items:flex-start}
+      nav.header-links{margin-left:0;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">
+          <img src="meri_hazri_logo.png" alt="Meri Hazri Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="fallback" style="display:none">MH</div>
+        </div>
+        <div class="title">
+          <h1>Terms of Service</h1>
+          <div class="meta">Meri Hazri • Effective Date: 15 Oct 2025</div>
+        </div>
+      </div>
+      <nav class="header-links">
+        <a href="/" title="Home">Home</a>
+        <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+        <a href="terms.html" title="Terms">Terms</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <p class="small">Welcome to <strong>Meri Hazri</strong>. By using our application, you agree to these Terms of Service. Please read them carefully.</p>
+
+      <section>
+        <h2>1. Use of the App</h2>
+        <ol>
+          <li>You must use the app only for lawful purposes.</li>
+          <li>You agree not to misuse, reverse-engineer, or hack the app in any way.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>2. User Accounts</h2>
+        <ol>
+          <li>You are responsible for keeping your login credentials secure.</li>
+          <li>You must not share your account or credentials with others.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>3. Content</h2>
+        <p>You are responsible for the content you upload or share within the app. Illegal, harmful, or offensive content is strictly prohibited and may result in account termination.</p>
+      </section>
+
+      <section>
+        <h2>4. Advertisements &amp; Third-Party Services</h2>
+        <p>Our app may display ads provided by Google AdMob. We are not responsible for third-party websites or services. <a href="privacy.html">See Privacy Policy</a> for details.</p>
+      </section>
+
+      <section>
+        <h2>5. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, Meri Hazri is not liable for any losses or damages arising from your use of the app.</p>
+      </section>
+
+      <section>
+        <h2>6. Termination</h2>
+        <p>We reserve the right to suspend or terminate your account if you violate these Terms or engage in abusive behaviour.</p>
+      </section>
+
+      <section>
+        <h2>7. Changes to Terms</h2>
+        <p>We may update these Terms periodically. Continued use of the app after updates means you accept the new Terms.</p>
+      </section>
+
+      <div class="actions" style="margin-top:24px">
+        <a class="btn" href="mailto:kishankumarmanand953@gmail.com">Contact Us</a>
+        <a class="btn secondary" href="privacy.html">Read Privacy Policy</a>
+      </div>
+    </main>
+
+    <footer class="site-foot">
+      <div>© <span id="year"></span> Meri Hazri — Thank you for using our app.</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>      font-weight:700;
       color:var(--text);
       font-size:18px;
       padding:8px;
